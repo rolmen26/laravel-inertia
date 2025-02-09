@@ -1,16 +1,43 @@
 {
-    "extends": "@vue/tsconfig",
     "compilerOptions": {
+        "noEmit": true,
+        "target": "ES2020",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "jsx": "react-jsx",
+        "esModuleInterop": true,
+        "resolveJsonModule": true,
+        "isolatedModules": true,
+        "allowImportingTsExtensions": true,
+        "moduleDetection": "force",
+        "jsxImportSource": "react",
+        "noImplicitThis": true,
+        "strict": true,
+        "useDefineForClassFields": true,
+        "forceConsistentCasingInFileNames": true,
+        "skipLibCheck": true,
+        "strictNullChecks": true,
+        "noImplicitReturns": true,
         "allowSyntheticDefaultImports": true,
+        "noImplicitOverride": true,
+        "noUnusedParameters": true,
+        "types": [
+            "vite/client",
+            "laravel/inertia",
+        ],
         "baseUrl": ".",
         "paths": {
-            "@/*": ["resources/js/*"]
+            "@/*": [
+                "resources/ts/*"
+            ]
         },
-        "types": ["node"]
     },
     "include": [
-        "resources/ts/**/*",
-        "resources/ts/**/*.vue"
+        "resources/ts/**/*"
     ],
-    "exclude": ["node_modules"]
+    "exclude": [
+        "node_modules",
+        "public",
+        "vendor"
+    ]
 }

@@ -9,6 +9,10 @@ class DashboardController extends Controller
 {
     public function index(): Response
     {
-        return Inertia::render('Dashboard');
+        return Inertia::render('Dashboard', [
+            'ventas' => 150,
+            'usuarios' => 22,
+            'proyectos' => 5,
+        ]);
     }
 }
